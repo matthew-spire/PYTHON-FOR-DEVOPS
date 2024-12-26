@@ -3,7 +3,7 @@ PYTHON := $(shell python -c "import sys; print('python.exe' if sys.platform.star
 install:
 	# PIP Install Commands
 	$(PYTHON) -m pip install --upgrade pip && \
-		$(PYTHON) pip install -r requirements.txt
+		$(PYTHON) -m pip install -r requirements.txt
 format:
 	# Format Code
 lint:
