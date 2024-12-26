@@ -1,7 +1,9 @@
+PYTHON := $(shell python -c "import sys; print('python.exe' if sys.platform.startswith('win') else 'python3')")
+
 install:
 	# PIP Install Commands
-	python.exe -m pip install --upgrade pip &&\
-		pip install -r requirements.txt
+	$(PYTHON) -m pip install --upgrade pip && \
+		$(PYTHON) pip install -r requirements.txt
 format:
 	# Format Code
 lint:
